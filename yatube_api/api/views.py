@@ -20,6 +20,7 @@ class CreateOrListViewSet(mixins.CreateModelMixin,
 
 
 class PostViewSet(viewsets.ModelViewSet):
+    """Вьюсет для постов."""
     queryset = Post.objects.all()
     serializer_class = PostSerializer
     pagination_class = LimitOffsetPagination
@@ -30,11 +31,13 @@ class PostViewSet(viewsets.ModelViewSet):
 
 
 class GroupViewSet(viewsets.ReadOnlyModelViewSet):
+    """Вьюсет для групп."""
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
 
 
 class CommentViewSet(viewsets.ModelViewSet):
+    """Вьюсет для комментариев."""
     serializer_class = CommentSerializer
     permission_classes = (IsAuthorOrReadOnly,)
 
@@ -50,6 +53,7 @@ class CommentViewSet(viewsets.ModelViewSet):
 
 
 class FollowViewSet(CreateOrListViewSet):
+    """Вьюсет для подписок."""
     serializer_class = FollowSerializer
     permission_classes = (permissions.IsAuthenticated,)
     filter_backends = (filters.SearchFilter,)
