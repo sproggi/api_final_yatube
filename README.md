@@ -10,7 +10,7 @@ Python3, Django 2.2, SimpleJWT, pytest
 Clone a repository and go to command line:
 
 ```sh
-git clone https://github.com/menyanet73/api_final_yatube.git
+git clone https://github.com/sproggi/api_final_yatube.git
 ```
 
 ```sh
