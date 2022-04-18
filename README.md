@@ -5,64 +5,56 @@ API социальной сети блогеров.
 
 #### Стек:
 Python3, Django 2.2, SimpleJWT, pytest
-## How start project:
+### Как запустить проект:
 
-Clone a repository and go to command line:
+Клонировать репозиторий и перейти в него в командной строке:
 
-```sh
-git clone https://github.com/sproggi/api_final_yatube.git
+```
+git clone https://github.com/yandex-praktikum/api_final_yatube.git
 ```
 
-```sh
+```
 cd api_final_yatube
 ```
 
-Create and activate virtual environment:
+Cоздать и активировать виртуальное окружение:
 
-```sh
-python3 -m venv env
 ```
-For Windows:
-```sh
-source env/Scripts/activate  
-```
-For Linux:
-```sh
-source env/bin/activate  
+python -m venv env
 ```
 
-Install dependencies from a file requirements.txt:
-
-```sh
-python3 -m pip install --upgrade pip
+```
+source venv/Scripts/activate
 ```
 
-```sh
+```
+python -m pip install --upgrade pip
+```
+
+Установить зависимости из файла requirements.txt:
+
+```
 pip install -r requirements.txt
 ```
 
-Apply migrations:
+Выполнить миграции:
 
-```sh
-cd yatube_api
 ```
-```sh
-python3 manage.py migrate
+python manage.py migrate
 ```
 
-Start project:
+Запустить проект:
 
-```sh
-python3 manage.py runserver
 ```
-
-### Documentation of API will be aviable in
+python manage.py runserver
+```
+### Документация по API
 ```sh
 127.0.0.1:8000/redoc/
 ```
 
-### Requests:
-##### Get posts
+### Запросы и эндпоинты:
+##### Все посты
 ```sh
 127.0.0.1:8000/api/v1/posts/
 ```
