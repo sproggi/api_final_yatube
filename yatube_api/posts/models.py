@@ -5,6 +5,7 @@ User = get_user_model()
 
 
 class Group(models.Model):
+    """Модель для создания групп."""
     title = models.CharField("Название сообщества", max_length=200)
     slug = models.SlugField(
         "Адрес сообщества",
@@ -18,6 +19,7 @@ class Group(models.Model):
 
 
 class Post(models.Model):
+    """Модель для создания постов."""
     text = models.TextField()
     pub_date = models.DateTimeField("Дата публикации", auto_now_add=True)
     author = models.ForeignKey(
@@ -37,6 +39,7 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
+    """Модель для комментирования постов."""
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="comments")
     post = models.ForeignKey(
@@ -47,6 +50,7 @@ class Comment(models.Model):
 
 
 class Follow(models.Model):
+    """Модель для создания подписок на авторов."""
     user = models.ForeignKey(
         User,
         related_name="follower",
