@@ -49,13 +49,13 @@ python manage.py migrate
 python manage.py runserver
 ```
 ### Документация по API
-```sh
+```
 127.0.0.1:8000/redoc/
 ```
 
 ### Запросы и эндпоинты:
 ##### Все посты
-```sh
+```
 127.0.0.1:8000/api/v1/posts/
 ```
 | Endpoints | Response |
